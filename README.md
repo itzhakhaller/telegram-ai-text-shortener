@@ -1,17 +1,18 @@
 # AI Text Shortener Bot
 
-Telegram-бот, который сокращает длинные тексты с помощью OpenAI API, сохраняя основной смысл и важную информацию.
+A Telegram bot that shortens long texts using the OpenAI API while preserving the main meaning and important information.
 
-## Возможности
+## Features
 
-- Принимает текст через Telegram
-- Сокращает текст с помощью AI
-- Не добавляет информацию, которой нет в исходном тексте
-- Проверяет минимальную и максимальную длину текста
-- Обрабатывает ошибки OpenAI API
-- Поддерживает команду /start
+- Accepts text through Telegram
+- Summarizes long text using AI
+- Preserves the original meaning
+- Does not add information that is not present in the source text
+- Checks minimum and maximum text length
+- Handles OpenAI API errors
+- Supports the `/start` command
 
-## Технологии
+## Technologies
 
 - Python
 - Telegram Bot API
@@ -19,23 +20,28 @@ Telegram-бот, который сокращает длинные тексты �
 - python-telegram-bot
 - python-dotenv
 
-## Запуск
+## Installation
 
-1. Установить зависимости:
+1. Install the required dependencies:
 
-pip install -r requirements.txt
+`pip install -r requirements.txt`
 
-2. Создать файл `.env`
+2. Create a `.env` file.
 
-3. Добавить:
+3. Add your API keys:
 
-TELEGRAM_TOKEN=your_telegram_token
-OPENAI_API_KEY=your_openai_api_key
+`TELEGRAM_TOKEN=your_telegram_token`
 
-4. Запустить:
+`OPENAI_API_KEY=your_openai_api_key`
 
-python bot.py
+4. Run the bot:
 
-## Безопасность
+`python bot.py`
 
-API-ключи хранятся в `.env` и не загружаются в GitHub.
+## Security
+
+API keys are stored in the `.env` file and are excluded from GitHub using `.gitignore`.
+
+## How it works
+
+Telegram message → Python bot → OpenAI API → shortened text → Telegram response
